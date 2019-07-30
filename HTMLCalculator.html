@@ -1,0 +1,60 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+        <title>Basic Two Operand Calculator</title>
+        <script> function operation() {
+  			//var obj = document.getElementById("PlayerSelect");
+            var obj =  document.getElementById("Select");
+            var num = parseInt(obj.selectedIndex);
+            var n1 = document.getElementById("operand1").value;
+            var n2 = document.getElementById("operand2").value;
+            var op1 = parseInt(n1);
+            var op2 = parseInt(n2);
+            var res = 0;
+           // var obj2 =  Math.floor((Math.random() * 3));
+             if(num == 0){
+                    res = op1 + op2;
+                    document.getElementById("result").innerHTML = 
+  			res;
+                }
+              if(num == 1){
+                  res = op1 - op2;
+                    document.getElementById("result").innerHTML = 
+  			res;
+                }
+                 if(num == 2){
+                    res = op1 * op2;
+                    document.getElementById("result").innerHTML = 
+  			res;
+                }
+              if(num == 3){
+                    res = op1/op2
+                    document.getElementById("result").innerHTML = 
+  			res;
+                }
+              
+            
+  			document.getElementById("demo").innerHTML = 
+  			obj.options[obj.selectedIndex].text;
+        }
+        </script>
+    
+  
+    <body>
+        <form target="_pg_blank">
+            <input type="number" name="Operand 1" id = "operand1" value = "0">
+            <input type="number" name="Operand 2" id = "operand2" value = "0">
+            <p class="auto-style2">Add/Substract/Multiply/Divide:&nbsp; <select id="Select">
+                    <option selected="selected">Addition</option>
+                    <option>Substract</option>
+                    <option>Multiply</option>
+                    <option>Divide</option>
+                </select> <br><br> <input type="button" onclick="operation()" value="Calculate"></p>
+            <label>Operation:
+                <p id="demo"></p>
+            </label>
+            <label>Result:
+                <p id="result"></p>
+            </label>
+        </form>
+    
+</body></html>
